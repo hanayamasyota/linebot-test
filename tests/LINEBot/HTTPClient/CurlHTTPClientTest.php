@@ -77,7 +77,7 @@ class CurlHTTPClientTest extends TestCase
      */
     public function testGet()
     {
-        $curl = new CurlHTTPClient("Rde3/I/TFVtd50VVzUEcuCswK7lIonOQL3yMZ6c5LE2sSdl/XUkLNSlAtX1w/GP1eUJ56sPTYT+R12Znwx0p/h7jBsLqe3UQHe7WejJoyjbZY/+nC5jp8L7I7IMLaennOZu1ECMwTV9MSMFDe80JnAdB04t89/1O/w1cDnyilFU=");
+        $curl = new CurlHTTPClient("channel-token");
         $res = $curl->get('127.0.0.1:' . CurlHTTPClientTest::$reqMirrorPort . '/foo/bar');
         $body = $res->getJSONDecodedBody();
         $this->assertNotNull($body);
@@ -93,7 +93,7 @@ class CurlHTTPClientTest extends TestCase
      */
     public function testGetWithParams()
     {
-        $curl = new CurlHTTPClient("Rde3/I/TFVtd50VVzUEcuCswK7lIonOQL3yMZ6c5LE2sSdl/XUkLNSlAtX1w/GP1eUJ56sPTYT+R12Znwx0p/h7jBsLqe3UQHe7WejJoyjbZY/+nC5jp8L7I7IMLaennOZu1ECMwTV9MSMFDe80JnAdB04t89/1O/w1cDnyilFU=");
+        $curl = new CurlHTTPClient("channel-token");
         $res = $curl->get('127.0.0.1:' . CurlHTTPClientTest::$reqMirrorPort . '/foo/bar', ['baz' => 'qwer']);
         $body = $res->getJSONDecodedBody();
         $this->assertNotNull($body);
