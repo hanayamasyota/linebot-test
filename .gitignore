@@ -1,5 +1,4 @@
 /.idea/
-composer.phar
 /tests/Private
 *.iml
 vendor/
