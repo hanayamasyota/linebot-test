@@ -1,6 +1,6 @@
 <?php
-DEFINE("ACCESS_TOKEN","Rde3/I/TFVtd50VVzUEcuCswK7lIonOQL3yMZ6c5LE2sSdl/XUkLNSlAtX1w/GP1eUJ56sPTYT+R12Znwx0p/h7jBsLqe3UQHe7WejJoyjbZY/+nC5jp8L7I7IMLaennOZu1ECMwTV9MSMFDe80JnAdB04t89/1O/w1cDnyilFU=");
-DEFINE("SECRET_TOKEN","f95acfbb398e6832ef3ce8734109856c");
+$ACCESS_TOKEN = "Rde3/I/TFVtd50VVzUEcuCswK7lIonOQL3yMZ6c5LE2sSdl/XUkLNSlAtX1w/GP1eUJ56sPTYT+R12Znwx0p/h7jBsLqe3UQHe7WejJoyjbZY/+nC5jp8L7I7IMLaennOZu1ECMwTV9MSMFDe80JnAdB04t89/1O/w1cDnyilFU=";
+$CHANNEL_SECRET = "f95acfbb398e6832ef3ce8734109856c";
 
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use \LINE\LINEBot;
@@ -18,8 +18,8 @@ if(isset($_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE])){
   $inputData = file_get_contents("php://input");
 
 //LINEBOTSDKの設定
-  $httpClient = new CurlHTTPClient(ACCESS_TOKEN);
-  $Bot = new LINEBot($HttpClient, ['channelSecret' => SECRET_TOKEN]);
+  $httpClient = new CurlHTTPClient($ACCESS_TOKEN);
+  $Bot = new LINEBot($HttpClient, ['channelSecret' => $CHANNEL_SECRET]);
   $signature = $_SERVER["HTTP_".HTTPHeader::LINE_SIGNATURE]; 
   $Events = $Bot->parseEventRequest($InputData, $Signature);
 
