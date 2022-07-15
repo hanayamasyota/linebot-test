@@ -1,5 +1,12 @@
 {  
-"require": {
-    "linecorp/line-bot-sdk": "^3.6"
-  }
+    "name": "linecorp/line-bot-sdk",
+    "description": "SDK of the LINE BOT API for PHP",
+    "keywords": [
+        "LINE",
+        "bot",
+        "sdk"
+    ],
+    "require": {
+        "linecorp/line-bot-sdk": "^3.6"
+    }
 }
