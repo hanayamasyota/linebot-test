@@ -1,4 +1,4 @@
-{  
+{
     "require": {
         "linecorp/line-bot-sdk": "^3.6"
     }
